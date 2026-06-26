@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { ButtonAnchor } from "@/components/ui/button-link";
 import { siteConfig } from "@/lib/config/site.config";
 import { fadeUpVariants, getMotionTransition, usePrefersReducedMotion } from "@/lib/motion";
-import { getPricingWhatsAppUrl } from "@/lib/whatsapp";
+import { getBookUrl } from "@/lib/book";
 import { cn } from "@/lib/utils";
 
 export function Pricing() {
@@ -71,7 +71,7 @@ export function Pricing() {
           </p>
           <ButtonAnchor
             size="lg"
-            href={getPricingWhatsAppUrl()}
+            href={getBookUrl()}
             target="_blank"
             rel="noopener noreferrer"
             className="h-12 bg-brand-primary px-8 font-semibold text-black hover:bg-brand-primary/90"

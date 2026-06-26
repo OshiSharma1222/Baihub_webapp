@@ -11,7 +11,7 @@ import {
   getMotionTransition,
   usePrefersReducedMotion,
 } from "@/lib/motion";
-import { getDefaultWhatsAppUrl } from "@/lib/whatsapp";
+import { getBookUrl } from "@/lib/book";
 
 function StarRating() {
   return (
@@ -59,7 +59,7 @@ export function Hero() {
             </p>
 
             <ButtonAnchor
-              href={getDefaultWhatsAppUrl()}
+              href={getBookUrl()}
               target="_blank"
               rel="noopener noreferrer"
               variant="link"

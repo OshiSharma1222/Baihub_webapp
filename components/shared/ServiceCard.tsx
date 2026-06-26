@@ -1,21 +1,18 @@
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { ButtonAnchor } from "@/components/ui/button-link";
-import type { ServiceWhatsAppKey } from "@/lib/config/site.config";
-import { getServiceWhatsAppUrl } from "@/lib/whatsapp";
+import { getBookUrl } from "@/lib/book";
 
 type ServiceCardProps = {
   title: string;
   description: string;
   image: string;
-  whatsappKey: ServiceWhatsAppKey;
 };
 
 export function ServiceCard({
   title,
   description,
   image,
-  whatsappKey,
 }: ServiceCardProps) {
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
@@ -46,7 +43,7 @@ export function ServiceCard({
         </div>
         <ButtonAnchor
           variant="link"
-          href={getServiceWhatsAppUrl(whatsappKey)}
+          href={getBookUrl()}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-3 h-auto justify-start px-0 text-sm font-semibold text-brand-secondary"

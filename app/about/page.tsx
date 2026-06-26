@@ -3,7 +3,7 @@ import { Header } from "@/components/layout/Header";
 import { MobileBottomCTA } from "@/components/layout/MobileBottomCTA";
 import { ButtonAnchor, ButtonLink } from "@/components/ui/button-link";
 import { createPageMetadata } from "@/lib/seo";
-import { getDefaultWhatsAppUrl } from "@/lib/whatsapp";
+import { getBookUrl } from "@/lib/book";
 
 export const metadata = createPageMetadata({
   title: "About BaiHub",
@@ -30,7 +30,7 @@ export default function AboutPage() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <ButtonAnchor
-              href={getDefaultWhatsAppUrl()}
+              href={getBookUrl()}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-brand-primary font-semibold text-black hover:bg-brand-primary/90"

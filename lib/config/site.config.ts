@@ -2,6 +2,7 @@ export const siteConfig = {
   name: "BaiHub",
   tagline: "Connecting families with trusted domestic help.",
   siteUrl: "https://www.baihub.co.in",
+  bookUrl: "https://baihub.co.in/dl",
   // Update when app login URL is confirmed
   loginUrl: "https://app.baihub.co.in",
 
