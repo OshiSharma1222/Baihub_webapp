@@ -1,9 +1,18 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useReducedMotion } from "framer-motion";
 
 export function usePrefersReducedMotion(): boolean {
-  return useReducedMotion() ?? false;
+  const reducedMotion = useReducedMotion();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return false;
+  return reducedMotion ?? false;
 }
 
 export const fadeUpVariants = {

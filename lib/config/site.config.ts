@@ -39,7 +39,6 @@ export const siteConfig = {
     { label: "Services", href: "#services" },
     { label: "How It Works", href: "#how-it-works" },
     { label: "Why BaiHub", href: "#why-baihub" },
-    { label: "Pricing", href: "#pricing" },
     { label: "About", href: "/about" },
   ],
 
@@ -126,6 +125,16 @@ export const siteConfig = {
     },
   ],
 
+  whyBaiHub: {
+    eyebrow: "Why Choose BaiHub",
+    headline: "Trusted by 2,500+ Families",
+    trustCard: {
+      title: "Trusted by India's Families",
+      description:
+        "Every helper is background checked, ID verified & professionally trained before their first booking.",
+    },
+  },
+
   features: [
     {
       title: "ID & Police Verification",
@@ -177,35 +186,6 @@ export const siteConfig = {
         "Background verification gave us peace of mind. Our housemaid has been with us for 6 months now.",
       author: "Rahul K.",
       location: "Noida",
-    },
-  ],
-
-  pricing: [
-    {
-      id: "part-time",
-      title: "Part-Time",
-      description: "Flexible hours for daily or weekly help.",
-      priceLabel: "From ₹499",
-      priceNote: "per visit / starting rates vary by role & city",
-      featured: false,
-      highlights: [
-        "Ideal for occasional or fixed-hour help",
-        "Verified & trained helpers",
-        "Easy rescheduling via support",
-      ],
-    },
-    {
-      id: "full-time",
-      title: "Full-Time",
-      description: "Dedicated helper for your household.",
-      priceLabel: "Custom quote",
-      priceNote: "based on role, hours & location",
-      highlights: [
-        "Long-term placement & matching",
-        "Trial day before commitment",
-        "48-hour replacement guarantee",
-      ],
-      featured: true,
     },
   ],
 

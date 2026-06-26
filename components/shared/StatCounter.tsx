@@ -14,10 +14,20 @@ export function StatCounter({ value, suffix = "", label }: StatCounterProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
   const reducedMotion = usePrefersReducedMotion();
-  const [animatedValue, setAnimatedValue] = useState(0);
+  const [animatedValue, setAnimatedValue] = useState(value);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    if (!isInView || reducedMotion) return;
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted || !isInView || reducedMotion) {
+      setAnimatedValue(value);
+      return;
+    }
+
+    setAnimatedValue(0);
 
     const duration = 1500;
     const start = performance.now();
@@ -30,9 +40,9 @@ export function StatCounter({ value, suffix = "", label }: StatCounterProps) {
     };
 
     requestAnimationFrame(tick);
-  }, [isInView, reducedMotion, value]);
+  }, [isInView, mounted, reducedMotion, value]);
 
-  const displayValue = reducedMotion ? value : animatedValue;
+  const displayValue = !mounted || reducedMotion ? value : animatedValue;
 
   return (
     <div ref={ref} className="text-center">

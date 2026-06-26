@@ -24,7 +24,7 @@ const appScreens = [
 ];
 
 const phoneVariants = {
-  hidden: { opacity: 0, y: 48, scale: 0.95 },
+  hidden: { opacity: 0, y: 60, scale: 0.92 },
   visible: { opacity: 1, y: 0, scale: 1 },
 };
 
@@ -62,7 +62,7 @@ export function HowItWorks() {
           </p>
         </motion.div>
 
-        <div className="mt-16 grid grid-cols-1 items-start gap-10 sm:grid-cols-3 sm:gap-6 lg:gap-10">
+        <div className="mt-16 grid grid-cols-1 items-start gap-8 sm:grid-cols-3 sm:gap-3 lg:gap-5">
           {appScreens.map((screen, index) => (
             <div key={screen.step.number} className="flex flex-col items-center">
               <motion.div
@@ -74,17 +74,13 @@ export function HowItWorks() {
                   reducedMotion
                     ? { duration: 0 }
                     : {
-                        duration: 0.55,
-                        delay: index * 0.12,
+                        duration: 0.6,
+                        delay: index * 0.15,
                         ease: [0.25, 0.46, 0.45, 0.94],
                       }
                 }
-                whileHover={
-                  reducedMotion ? undefined : { y: -6, transition: { duration: 0.25 } }
-                }
                 className={`relative overflow-hidden rounded-[2rem] shadow-2xl shadow-black/10 ${PHONE_WIDTH}`}
               >
-                <div className="h-1 bg-brand-primary" />
                 <div className="relative aspect-[9/19] w-full bg-white">
                   <Image
                     src={screen.src}

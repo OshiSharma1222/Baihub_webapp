@@ -2,19 +2,33 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/config/site.config";
 
 export function AppStoreBadges({ className = "" }: { className?: string }) {
-  const downloadUrl = siteConfig.appStores.downloadUrl;
-
   const badges = [
-    { src: "/images/google-play-badge.svg", alt: "Get it on Google Play", label: "Get BaiHub on Google Play" },
-    { src: "/images/app-store-badge.svg", alt: "Download on the App Store", label: "Download BaiHub on the App Store" },
+    {
+      href: siteConfig.appStores.googlePlay,
+      src: "/images/google-play-badge.png",
+      alt: "Get it on Google Play",
+      label: "Get BaiHub on Google Play",
+      width: 646,
+      height: 250,
+      imgClass: "h-[58px] w-auto object-contain sm:h-[64px]",
+    },
+    {
+      href: siteConfig.appStores.appStore,
+      src: "/images/app-store-badge.svg",
+      alt: "Download on the App Store",
+      label: "Download BaiHub on the App Store",
+      width: 120,
+      height: 40,
+      imgClass: "h-[40px] w-auto object-contain sm:h-[44px]",
+    },
   ];
 
   return (
-    <div className={`flex items-center gap-3 ${className}`}>
+    <div className={`flex items-center gap-2 ${className}`}>
       {badges.map((badge) => (
         <Link
           key={badge.alt}
-          href={downloadUrl}
+          href={badge.href}
           target="_blank"
           rel="noopener noreferrer"
           aria-label={badge.label}
@@ -24,9 +38,9 @@ export function AppStoreBadges({ className = "" }: { className?: string }) {
           <img
             src={badge.src}
             alt={badge.alt}
-            width={168}
-            height={50}
-            className="h-[46px] w-[142px] rounded-lg object-cover sm:h-[50px] sm:w-[168px]"
+            width={badge.width}
+            height={badge.height}
+            className={badge.imgClass}
           />
         </Link>
       ))}

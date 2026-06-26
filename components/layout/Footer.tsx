@@ -36,7 +36,7 @@ const socialIconMap = {
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-white pb-24 md:pb-8">
+    <footer className="bg-black pb-24 text-white md:pb-8">
       <div className="section-container py-12 lg:py-16">
         <div className="grid gap-10 lg:grid-cols-5">
           <div className="lg:col-span-2">
@@ -44,12 +44,12 @@ export function Footer() {
               <Image
                 src="/images/logo.png"
                 alt={siteConfig.name}
-                width={140}
-                height={40}
-                className="h-8 w-auto"
+                width={200}
+                height={58}
+                className="h-12 w-auto brightness-0 invert sm:h-14 lg:h-16"
               />
             </Link>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-brand-muted">
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/70">
               {siteConfig.tagline}
             </p>
             <div className="mt-6 flex gap-3">
@@ -64,7 +64,7 @@ export function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.name}
-                    className="flex size-10 items-center justify-center rounded-full border border-border text-brand-secondary transition-colors hover:bg-brand-surface hover:text-brand-secondary"
+                    className="flex size-10 items-center justify-center rounded-full border border-white/20 text-white transition-colors hover:border-brand-primary hover:bg-white/10 hover:text-brand-primary"
                   >
                     <Icon className="size-4" />
                   </a>
@@ -74,13 +74,13 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-brand-foreground">Company</h3>
+            <h3 className="text-sm font-semibold text-white">Company</h3>
             <ul className="mt-4 space-y-3">
               {siteConfig.footerLinks.company.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-brand-muted transition-colors hover:text-brand-secondary"
+                    className="text-sm text-white/70 transition-colors hover:text-white"
                   >
                     {link.label}
                   </Link>
@@ -90,13 +90,13 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-brand-foreground">Legal</h3>
+            <h3 className="text-sm font-semibold text-white">Legal</h3>
             <ul className="mt-4 space-y-3">
               {siteConfig.footerLinks.legal.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-brand-muted transition-colors hover:text-brand-secondary"
+                    className="text-sm text-white/70 transition-colors hover:text-white"
                   >
                     {link.label}
                   </Link>
@@ -106,13 +106,13 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-brand-foreground">Services</h3>
+            <h3 className="text-sm font-semibold text-white">Services</h3>
             <ul className="mt-4 space-y-3">
               {siteConfig.footerLinks.services.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-brand-muted transition-colors hover:text-brand-secondary"
+                    className="text-sm text-white/70 transition-colors hover:text-white"
                   >
                     {link.label}
                   </Link>
@@ -122,15 +122,15 @@ export function Footer() {
           </div>
         </div>
 
-        <Separator className="my-8" />
+        <Separator className="my-8 bg-white/15" />
 
-        <div className="flex flex-col gap-4 text-sm text-brand-muted sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-4 text-sm text-white/70 sm:flex-row sm:items-center sm:justify-between">
           <div className="space-y-1">
             <p>
               WhatsApp:{" "}
               <a
                 href={buildWhatsAppUrl(siteConfig.whatsapp.defaultMessage)}
-                className="font-medium text-brand-secondary hover:underline"
+                className="font-medium text-white transition-colors hover:text-brand-primary"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -141,13 +141,13 @@ export function Footer() {
               Email:{" "}
               <a
                 href={`mailto:${siteConfig.contact.email}`}
-                className="font-medium text-brand-secondary hover:underline"
+                className="font-medium text-white transition-colors hover:text-brand-primary"
               >
                 {siteConfig.contact.email}
               </a>
             </p>
           </div>
-          <p>© 2026 {siteConfig.name}. All rights reserved.</p>
+          <p className="text-white/60">© 2026 {siteConfig.name}. All rights reserved.</p>
         </div>
       </div>
     </footer>
