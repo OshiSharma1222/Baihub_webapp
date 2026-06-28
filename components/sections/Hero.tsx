@@ -97,7 +97,7 @@ export function Hero() {
               <div className="absolute inset-0 flex items-center justify-center p-4">
                 <div className="relative h-[88%] w-[88%]">
                   <Image
-                    src="/images/hero-character.png"
+                    src="/images/hero-character-bg-removed.png"
                     alt="Verified BaiHub domestic helper, trained, friendly, and ready to help"
                     fill
                     priority

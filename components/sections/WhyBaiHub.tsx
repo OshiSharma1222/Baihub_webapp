@@ -50,7 +50,7 @@ export function WhyBaiHub() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={reducedMotion ? { duration: 0 } : { duration: 0.55 }}
-            className="flex flex-col rounded-3xl bg-brand-primary p-8 text-black shadow-lg sm:p-10"
+            className="flex flex-col rounded-3xl bg-[#FFDD7A] p-8 text-black shadow-lg sm:p-10"
           >
             <div className="flex size-12 items-center justify-center rounded-2xl bg-black/10">
               <Shield className="size-6 text-black" strokeWidth={2.25} />

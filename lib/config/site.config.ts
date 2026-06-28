@@ -8,8 +8,8 @@ export const siteConfig = {
 
   appStores: {
     downloadUrl: "https://baihub.co.in/dl",
-    googlePlay: "https://baihub.co.in/dl",
-    appStore: "https://baihub.co.in/dl",
+    googlePlay: "https://play.google.com/store/apps/details?id=com.baihub.app&pcampaignid=web_share",
+    appStore: "https://apps.apple.com/in/app/baihub/id6756186197",
   },
 
   contact: {
@@ -243,7 +243,7 @@ export const siteConfig = {
     {
       question: "Which cities do you serve?",
       answer:
-        "BaiHub currently serves major cities across Delhi NCR and is expanding. Contact us on WhatsApp to confirm availability in your area.",
+        "BaiHub currently serves major cities across Bangaluru and is expanding. Contact us on WhatsApp to confirm availability in your area.",
     },
     {
       question: "How fast is matching?",
@@ -270,7 +270,7 @@ export const siteConfig = {
     },
     {
       name: "Instagram",
-      href: "https://instagram.com/baihub",
+      href: "https://www.instagram.com/baihub__india",
       icon: "instagram",
     },
   ],
