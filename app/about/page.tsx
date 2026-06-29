@@ -20,7 +20,7 @@ export default function AboutPage() {
         <div className="section-container mx-auto max-w-3xl">
           <h1 className="text-4xl font-bold text-brand-foreground">About BaiHub</h1>
           <p className="mt-6 text-lg leading-relaxed text-brand-muted">
-          BaiHub India is redefining how Bengaluru households access domestic help. We connect families with verified, trained, and identity-checked part-time and live-in helpers - bringing structure, reliability, and professionalism to a deeply unorganised segment.
+          BaiHub India is redefining how households across 12+ cities access domestic help. We connect families with verified, trained, and identity-checked part-time and live-in helpers - bringing structure, reliability, and professionalism to a deeply unorganised segment.
           </p>
           <p className="mt-4 text-lg leading-relaxed text-brand-muted">
           With our hub-home model, where helpers stay nearby, we ensure a 30-day uninterrupted, on-time service guarantee, solving the industry's biggest pain point: inconsistency.

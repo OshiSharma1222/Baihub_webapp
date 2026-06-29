@@ -25,7 +25,7 @@ export const siteConfig = {
     serviceMessages: {
       babysitter:
         "Hello, I am looking for a verified Babysitter/Nanny through BaiHub.",
-      japa: "Hello, I am looking for a verified Japa Maid through BaiHub.",
+      japa: "Hello, I am looking for a verified Baby Sitter through BaiHub.",
       housemaid: "Hello, I am looking for a verified Housemaid through BaiHub.",
       helper: "Hello, I am looking for a verified Helper through BaiHub.",
     },
@@ -45,7 +45,7 @@ export const siteConfig = {
   hero: {
     headline: "Trusted Domestic Help in Minutes.",
     subhead:
-      "Verified Babysitters, Japa Maids, Housemaids and Helpers. Part-time or full-time, with complete peace of mind.",
+      "Verified Babysitters, Housemaids and Helpers. Part-time or full-time, with complete peace of mind.",
     trustStrip: "Trusted by 2,500+ families · 12 cities live",
     localityCta: "Request BaiHub in your locality",
     rating: {
@@ -72,9 +72,9 @@ export const siteConfig = {
   services: [
     {
       id: "japa",
-      title: "Japa Maid",
+      title: "BabySitter",
       description:
-        "Specialized postnatal care for mother and newborn. Bathing, massage, feeding support, and recovery assistance.",
+        "45+ Babysitters available. Specialized postnatal care for mother and newborn. Bathing, massage, feeding support, and recovery assistance.",
       image: "/images/service-japa.png",
       whatsappKey: "japa" as const,
     },
@@ -177,7 +177,7 @@ export const siteConfig = {
     },
     {
       quote:
-        "The Japa maid they matched was exactly what we needed after delivery. Very professional.",
+        "The baby sitter they matched was exactly what we needed. Very professional.",
       author: "Priya M.",
       location: "Delhi NCR",
     },
@@ -251,26 +251,16 @@ export const siteConfig = {
         "Most families are matched within 24 hours after sharing their requirements. Urgent requests are prioritized by our support team.",
     },
     {
-      question: "What does a Japa maid do?",
+      question: "What does a Baby Sitter do?",
       answer:
-        "Japa maids specialize in postnatal care: newborn bathing and massage, breastfeeding support, mother recovery assistance, hygiene for baby and mother, and sometimes postnatal meal preparation.",
+        "Baby sitters specialize in childcare: feeding, bathing, diaper changes, playtime supervision, sleep routines, and ensuring the safety and well-being of your little one.",
     },
   ],
 
   socialLinks: [
     {
-      name: "Facebook",
-      href: "https://facebook.com/baihub",
-      icon: "facebook",
-    },
-    {
-      name: "Twitter",
-      href: "https://twitter.com/baihub",
-      icon: "twitter",
-    },
-    {
       name: "Instagram",
-      href: "https://www.instagram.com/baihub__india",
+      href: "https://www.instagram.com/baihub__india/",
       icon: "instagram",
     },
   ],
@@ -286,7 +276,6 @@ export const siteConfig = {
     ],
     services: [
       { label: "Babysitters / Nannies", href: "#services" },
-      { label: "Japa Maids", href: "#services" },
       { label: "Housemaids", href: "#services" },
       { label: "Helpers", href: "#services" },
     ],

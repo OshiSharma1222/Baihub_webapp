@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
 import { siteConfig } from "@/lib/config/site.config";
+import type { Metadata } from "next";
 
 const defaultTitle = "BaiHub - Trusted Domestic Help in Minutes";
 const defaultDescription =
-  "Verified Babysitters, Japa Maids, Housemaids and Helpers - Part-time or Full-time with ease";
+  "Verified Babysitters, Housemaids and Helpers - Part-time or Full-time with ease";
 
 export const siteMetadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
@@ -16,7 +16,7 @@ export const siteMetadata: Metadata = {
     "domestic help",
     "maid service",
     "babysitter",
-    "japa maid",
+    "babysitter",
     "house help",
     "verified helpers",
     "nanny",

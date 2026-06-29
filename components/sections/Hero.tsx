@@ -82,26 +82,26 @@ export function Hero() {
             animate="visible"
             variants={fadeUpVariants}
             transition={{ ...transition, delay: reducedMotion ? 0 : 0.12 }}
-            className="relative mx-auto flex w-full max-w-md items-center justify-center lg:max-w-none"
+            className="relative mx-auto flex w-full max-w-lg items-center justify-center sm:max-w-xl lg:max-w-none"
           >
-            <div className="relative aspect-square w-full max-w-[420px] sm:max-w-[480px] lg:max-w-[520px]">
+            <div className="relative aspect-square w-full max-w-[480px] sm:max-w-[560px] lg:max-w-[640px] xl:max-w-[720px]">
               <div
                 aria-hidden="true"
-                className="absolute left-1/2 top-1/2 size-[78%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-brand-primary/35 via-brand-primary/15 to-brand-primary/5 blur-sm"
+                className="absolute left-1/2 top-1/2 size-[85%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-brand-primary/35 via-brand-primary/15 to-brand-primary/5 blur-sm"
               />
               <div
                 aria-hidden="true"
-                className="absolute left-1/2 top-1/2 size-[72%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-tr from-brand-primary/25 to-white/80"
+                className="absolute left-1/2 top-1/2 size-[78%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-tr from-brand-primary/25 to-white/80"
               />
 
-              <div className="absolute inset-0 flex items-center justify-center p-4">
-                <div className="relative h-[88%] w-[88%]">
+              <div className="absolute inset-0 flex items-center justify-center p-1 sm:p-2">
+                <div className="relative h-full w-full">
                   <Image
                     src="/images/hero-character-bg-removed.png"
                     alt="Verified BaiHub domestic helper, trained, friendly, and ready to help"
                     fill
                     priority
-                    sizes="(max-width: 1024px) 90vw, 520px"
+                    sizes="(max-width: 640px) 90vw, (max-width: 1024px) 560px, 720px"
                     className="object-contain object-center drop-shadow-md"
                   />
                 </div>

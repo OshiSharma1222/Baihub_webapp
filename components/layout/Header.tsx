@@ -28,12 +28,6 @@ export function Header() {
 
   return (
     <>
-      <a
-        href="#main"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-brand-primary focus:px-4 focus:py-2 focus:text-black"
-      >
-        Skip to content
-      </a>
       <header
         className={cn(
           "sticky top-0 z-50 w-full border-b transition-all duration-300",
@@ -47,9 +41,9 @@ export function Header() {
             <Image
               src="/images/logo.png"
               alt={siteConfig.name}
-              width={180}
-              height={52}
-              className="h-12 w-auto sm:h-14 lg:h-16"
+              width={220}
+              height={64}
+              className="h-14 w-auto sm:h-16 lg:h-[4.5rem]"
               priority
             />
           </Link>

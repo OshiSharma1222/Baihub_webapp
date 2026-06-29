@@ -59,13 +59,13 @@ export function FAQ() {
               >
                 <AccordionTrigger className="gap-4 py-5 text-left text-base font-semibold text-brand-foreground hover:no-underline [&[data-panel-open]]:text-brand-foreground">
                   <span className="flex items-start gap-3">
-                    <span className="mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-full bg-brand-primary text-xs font-bold text-black">
-                      {String(index + 1).padStart(2, "0")}
+                    <span className="mt-0.5 shrink-0 text-sm font-semibold tabular-nums text-brand-muted">
+                      {index + 1}.
                     </span>
                     <h3 className="text-base font-semibold">{item.question}</h3>
                   </span>
                 </AccordionTrigger>
-                <AccordionContent className="pb-5 pl-10 text-sm leading-relaxed text-brand-muted sm:pl-12">
+                <AccordionContent className="pb-5 pl-7 text-sm leading-relaxed text-brand-muted sm:pl-8">
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>

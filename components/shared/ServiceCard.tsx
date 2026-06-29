@@ -41,15 +41,16 @@ export function ServiceCard({
             Full-time
           </Badge>
         </div>
-        <ButtonAnchor
-          variant="link"
-          href={getBookUrl()}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-3 h-auto justify-start px-0 text-sm font-semibold text-brand-secondary"
-        >
-          Book this helper
-        </ButtonAnchor>
+        <div className="mt-4 flex justify-end sm:justify-center">
+          <ButtonAnchor
+            href={getBookUrl()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="h-10 bg-black px-5 text-sm font-semibold text-white hover:bg-black/90"
+          >
+            Book this helper
+          </ButtonAnchor>
+        </div>
       </div>
     </article>
   );

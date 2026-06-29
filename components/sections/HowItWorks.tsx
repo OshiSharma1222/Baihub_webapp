@@ -17,7 +17,7 @@ const appScreens = [
     step: siteConfig.steps[1],
   },
   {
-    src: "/images/app-screen-3.png",
+    src: "/images/app-screen-3.jpg",
     alt: "BaiHub app, book and pay securely",
     step: siteConfig.steps[2],
   },
@@ -33,7 +33,7 @@ const labelVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-const PHONE_WIDTH = "w-[180px] sm:w-[220px] lg:w-[240px]";
+const PHONE_WIDTH = "w-[80%] sm:w-[220px] lg:w-[240px]";
 
 export function HowItWorks() {
   const reducedMotion = usePrefersReducedMotion();
@@ -41,7 +41,7 @@ export function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="section-padding overflow-hidden bg-gradient-to-b from-brand-primary/10 via-brand-primary/5 to-white"
+      className="overflow-hidden bg-gradient-to-b from-brand-primary/10 via-brand-primary/5 to-white py-10 sm:section-padding"
     >
       <div className="section-container">
         <motion.div
@@ -54,15 +54,15 @@ export function HowItWorks() {
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-secondary">
             How It Works
           </p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-brand-foreground sm:text-4xl">
+          <h2 className="mt-2 text-2xl font-bold tracking-tight text-brand-foreground sm:mt-3 sm:text-4xl">
             Book trusted help in 3 simple steps
           </h2>
-          <p className="mt-4 text-lg text-brand-muted">
+          <p className="mt-3 text-base text-brand-muted sm:mt-4 sm:text-lg">
             Three simple steps to trusted help at home.
           </p>
         </motion.div>
 
-        <div className="mt-16 grid grid-cols-1 items-start gap-8 sm:grid-cols-3 sm:gap-3 lg:gap-5">
+        <div className="mt-8 grid grid-cols-1 items-start gap-5 sm:mt-16 sm:grid-cols-3 sm:gap-3 lg:gap-5">
           {appScreens.map((screen, index) => (
             <div key={screen.step.number} className="flex flex-col items-center">
               <motion.div
@@ -86,7 +86,7 @@ export function HowItWorks() {
                     src={screen.src}
                     alt={screen.alt}
                     fill
-                    sizes="(max-width: 640px) 180px, 240px"
+                    sizes="(max-width: 640px) 80vw, 240px"
                     className="object-cover object-top"
                   />
                 </div>
@@ -102,7 +102,7 @@ export function HowItWorks() {
                     ? { duration: 0 }
                     : { duration: 0.4, delay: 0.25 + index * 0.12 }
                 }
-                className="mt-6 max-w-[240px] text-center"
+                className="mt-3 max-w-[240px] text-center sm:mt-6"
               >
                 <div className="mx-auto mb-2 flex size-8 items-center justify-center rounded-full bg-brand-primary text-sm font-bold text-black">
                   {screen.step.number}
