@@ -52,7 +52,7 @@ function MarqueeRow({
   reduceMotion,
   reverse = false,
 }: {
-  items: typeof siteConfig.testimonials;
+  items: (typeof siteConfig.testimonials)[number][];
   reduceMotion: boolean;
   reverse?: boolean;
 }) {

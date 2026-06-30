@@ -95,10 +95,9 @@ export function Header() {
   }, []);
 
   const mainLinks = siteConfig.navLinks.filter(
-    (link) => link.label !== "About" && link.label !== "Blog"
+    (link) => link.label !== "About"
   );
   const aboutLink = siteConfig.navLinks.find((link) => link.label === "About");
-  const blogLink = siteConfig.navLinks.find((link) => link.label === "Blog");
 
   return (
     <>
@@ -136,14 +135,6 @@ export function Header() {
               </Link>
             ))}
             <AreasDropdown />
-            {blogLink && (
-              <Link
-                href={blogLink.href}
-                className="text-sm font-medium text-brand-foreground/80 transition-colors hover:text-brand-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-secondary focus-visible:ring-offset-2"
-              >
-                {blogLink.label}
-              </Link>
-            )}
             {aboutLink && (
               <Link
                 href={aboutLink.href}
@@ -211,16 +202,6 @@ export function Header() {
                       </Link>
                     ))}
                   </div>
-                )}
-
-                {blogLink && (
-                  <Link
-                    href={blogLink.href}
-                    onClick={() => setOpen(false)}
-                    className="rounded-xl px-3 py-3 text-base font-medium text-brand-foreground transition-colors hover:bg-brand-surface"
-                  >
-                    {blogLink.label}
-                  </Link>
                 )}
 
                 {aboutLink && (
