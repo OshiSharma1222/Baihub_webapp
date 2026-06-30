@@ -59,12 +59,12 @@ function MarqueeRow({
   const duplicated = [...items, ...items];
 
   return (
-    <div className="marquee-row group flex overflow-hidden">
+    <div className="marquee-row  group flex overflow-hidden">
       <div
         className={
           reduceMotion
-            ? "flex gap-5 px-2.5"
-            : `flex w-max gap-5 px-2.5 ${reverse ? "animate-marquee-reverse" : "animate-marquee"}`
+            ? "flex gap-5 px-2.5 sm:mb-2 lg:mb-4"
+            : `flex w-max gap-5 px-2.5 sm:mb-2 lg:mb-4 ${reverse ? "animate-marquee-reverse" : "animate-marquee"}`
         }
         style={{ ["--marquee-duration" as string]: "55s" }}
       >

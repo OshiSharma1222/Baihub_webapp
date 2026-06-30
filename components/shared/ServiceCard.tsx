@@ -23,7 +23,7 @@ export function ServiceCard({
           alt={title}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-          className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
+          className="sm:object-contain lg:object-cover object-top transition-transform duration-300 group-hover:scale-105"
         />
       </div>
 

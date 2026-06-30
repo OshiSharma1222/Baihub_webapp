@@ -59,9 +59,9 @@ export function AreasWeServe() {
             >
               <article
                 id={area.id}
-                className="scroll-mt-24 rounded-xl border border-brand-primary/15 bg-gradient-to-br from-white to-brand-primary/10 px-4 py-4 transition-all hover:border-brand-secondary hover:shadow-sm sm:px-5 sm:py-5"
+                className="h-full flex justify-between flex-col scroll-mt-24 rounded-xl border border-brand-primary/15 bg-gradient-to-br from-white to-brand-primary/10 px-4 py-4 transition-all hover:border-brand-secondary hover:shadow-sm sm:px-5 sm:py-5"
               >
-                <p className="text-sm font-semibold leading-snug text-brand-foreground sm:text-base">
+                <p className="text-sm min-h-[44px] font-semibold leading-snug text-brand-foreground sm:text-base">
                   {area.name}
                 </p>
                 <p className="mt-2 text-xs text-brand-muted sm:text-sm">
