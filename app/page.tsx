@@ -1,11 +1,13 @@
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { MobileBottomCTA } from "@/components/layout/MobileBottomCTA";
+import { AreasWeServe } from "@/components/sections/AreasWeServe";
 import { FAQ } from "@/components/sections/FAQ";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { Hero } from "@/components/sections/Hero";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Services } from "@/components/sections/Services";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { WhyBaiHub } from "@/components/sections/WhyBaiHub";
 
 export default function HomePage() {
@@ -17,6 +19,8 @@ export default function HomePage() {
         <Services />
         <HowItWorks />
         <WhyBaiHub />
+        <AreasWeServe />
+        <Testimonials />
         <FAQ />
         <FinalCTA />
       </main>

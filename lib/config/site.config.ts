@@ -39,7 +39,27 @@ export const siteConfig = {
     { label: "Services", href: "#services" },
     { label: "How It Works", href: "#how-it-works" },
     { label: "Why BaiHub", href: "#why-baihub" },
+    // { label: "Blog", href: "/blog" },
     { label: "About", href: "/about" },
+  ],
+
+  areasSection: {
+    headline: "Areas We Serve in Bangalore",
+    description:
+      "BaiHub is live across 10+ premium societies in North Bangalore including Nikoo Homes, Purva Atmosphere, DNR Arista, Sobha City, Vajram Newtown and nearby areas.",
+  },
+
+  areas: [
+    { id: "nikoo-homes-1", name: "Nikoo Homes 1", experts: 20, etaMinutes: 10 },
+    { id: "nikoo-homes-2", name: "Nikoo Homes 2", experts: 18, etaMinutes: 10 },
+    { id: "nikoo-homes-3", name: "Nikoo Homes 3", experts: 22, etaMinutes: 12 },
+    { id: "nikoo-homes-4", name: "Nikoo Homes 4", experts: 16, etaMinutes: 12 },
+    { id: "purva-atmosphere", name: "Purva Atmosphere", experts: 24, etaMinutes: 15 },
+    { id: "dnr-arista", name: "DNR Arista", experts: 20, etaMinutes: 15 },
+    { id: "sobha-city", name: "Sobha City", experts: 28, etaMinutes: 10 },
+    { id: "trendsquares-ambience", name: "Trendsquares Ambience", experts: 18, etaMinutes: 12 },
+    { id: "vajram-newtown", name: "Vajram Newtown", experts: 20, etaMinutes: 10 },
+    { id: "the-leela-residencies", name: "The Leela Residencies", experts: 15, etaMinutes: 15 },
   ],
 
   hero: {
@@ -75,7 +95,7 @@ export const siteConfig = {
       title: "BabySitter",
       description:
         "45+ Babysitters available. Specialized postnatal care for mother and newborn. Bathing, massage, feeding support, and recovery assistance.",
-      image: "/images/service-japa.png",
+      image: "/images/who-hire-babysitter.png",
       whatsappKey: "japa" as const,
     },
     {
@@ -83,7 +103,7 @@ export const siteConfig = {
       title: "House Cleaning",
       description:
         "Professional sweeping, mopping, dusting, and daily upkeep to keep your home spotless.",
-      image: "/images/service-cleaning.png",
+      image: "/images/who-hire-cleaning.png",
       whatsappKey: "housemaid" as const,
     },
     {
@@ -91,7 +111,7 @@ export const siteConfig = {
       title: "Cooking",
       description:
         "Home-style meal preparation, cutting, chopping, and kitchen cleanup. Fresh food daily.",
-      image: "/images/service-cooking.png",
+      image: "/images/who-hire-cooking.png",
       whatsappKey: "helper" as const,
     },
     {
@@ -99,7 +119,7 @@ export const siteConfig = {
       title: "Elderly Care",
       description:
         "Compassionate companionship, meal service, medication reminders, and daily assistance for seniors.",
-      image: "/images/service-elderly.png",
+      image: "/images/who-hire-elderly.png",
       whatsappKey: "helper" as const,
     },
   ],
@@ -168,24 +188,125 @@ export const siteConfig = {
     { label: "Avg. Match Time", value: 24, suffix: " hrs" },
   ],
 
+  testimonialsSection: {
+    eyebrow: "Customer Reviews",
+    headline: "Hear From Our Customers",
+  },
+
   testimonials: [
     {
       quote:
-        "BaiHub connected us with a wonderful nanny quickly and stress-free.",
-      author: "Amanda S.",
-      location: "Gurgaon",
+        "Our cook from BaiHub makes delicious home-style meals every day, and the househelp keeps everything spotless. Truly reliable.",
+      author: "Niharika",
+      role: "Cook & Househelp",
     },
     {
       quote:
-        "The baby sitter they matched was exactly what we needed. Very professional.",
-      author: "Priya M.",
-      location: "Delhi NCR",
+        "The babysitter is wonderful with our little one — caring, punctual, and trustworthy. We finally have peace of mind.",
+      author: "Gautam",
+      role: "Babysitter",
     },
     {
       quote:
-        "Background verification gave us peace of mind. Our housemaid has been with us for 6 months now.",
-      author: "Rahul K.",
-      location: "Noida",
+        "Having both a househelp and babysitter through BaiHub has made our daily routine so much easier. Highly recommend.",
+      author: "Mayuri",
+      role: "Househelp & Babysitter",
+    },
+    {
+      quote:
+        "Our househelp is hardworking and thorough. The home has never looked better.",
+      author: "Prashant",
+      role: "Househelp",
+    },
+    {
+      quote:
+        "Booking was simple and the helper arrived right on time. Very satisfied with the service.",
+      author: "Nishesh",
+      role: "Househelp",
+    },
+    {
+      quote:
+        "Professional, polite, and dependable househelp. Couldn't ask for more.",
+      author: "Ankur",
+      role: "Househelp",
+    },
+    {
+      quote:
+        "Spotless cleaning every single day. BaiHub made finding help effortless.",
+      author: "Ruchi",
+      role: "Househelp",
+    },
+    {
+      quote:
+        "Reliable and friendly househelp. She treats our home like her own.",
+      author: "Parvati",
+      role: "Househelp",
+    },
+    {
+      quote:
+        "Great experience from start to finish. The househelp is fantastic.",
+      author: "Sabah",
+      role: "Househelp",
+    },
+    {
+      quote:
+        "Quick matching and a wonderful helper. Highly recommend BaiHub.",
+      author: "Varun",
+      role: "Househelp",
+    },
+    {
+      quote:
+        "Our househelp is meticulous and warm. The whole family loves her.",
+      author: "Megha",
+      role: "Househelp",
+    },
+    {
+      quote:
+        "Smooth onboarding and dependable service. Very happy with BaiHub.",
+      author: "Gaurav",
+      role: "Househelp",
+    },
+    {
+      quote:
+        "The helper is punctual and detail-oriented. Our home stays spotless.",
+      author: "Saira",
+      role: "Househelp",
+    },
+    {
+      quote:
+        "Finding trusted help used to be stressful — BaiHub solved that completely.",
+      author: "Aditi",
+      role: "Househelp",
+    },
+    {
+      quote:
+        "Professional service and a lovely househelp. Five stars all the way.",
+      author: "Asmita",
+      role: "Househelp",
+    },
+    {
+      quote:
+        "Reliable help every day without fail. Truly a relief for our family.",
+      author: "Abhilasha",
+      role: "Househelp",
+    },
+    {
+      quote:
+        "Wonderful househelp who is thorough and kind. Highly recommend.",
+      author: "Reetika",
+      role: "Househelp",
+    },
+    {
+      quote:
+        "Excellent service. The helper is hardworking and trustworthy.",
+      author: "Manisha",
+      role: "Househelp",
+    },
+    {
+      quote:
+        "BaiHub matched us with a fantastic househelp. So grateful for the service.",
+      author: "Sushmita",
+      role: "Househelp",
     },
   ],
 
@@ -268,7 +389,8 @@ export const siteConfig = {
   footerLinks: {
     company: [
       { label: "About", href: "/about" },
-      { label: "Support", href: "/support" },
+      // { label: "Blog", href: "/blog" },
+      // { label: "Support", href: "/support" },
     ],
     legal: [
       { label: "Privacy Policy", href: "/privacy-policy" },

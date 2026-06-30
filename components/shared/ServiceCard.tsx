@@ -16,14 +16,14 @@ export function ServiceCard({
 }: ServiceCardProps) {
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-      {/* Illustration */}
-      <div className="relative flex h-48 items-center justify-center bg-brand-primary/5 p-4">
+      {/* Photo */}
+      <div className="relative h-56 w-full overflow-hidden rounded-t-2xl bg-brand-primary/5">
         <Image
           src={image}
           alt={title}
-          width={280}
-          height={200}
-          className="h-full w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
         />
       </div>
 
