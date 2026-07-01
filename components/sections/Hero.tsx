@@ -41,14 +41,14 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-brand-primary/10 via-brand-primary/5 to-white pb-0 pt-6 sm:pt-10 lg:pt-12">
       <div className="section-container relative">
-        <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 xl:gap-16">
+        <div className="grid items-center gap-6 sm:gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 xl:gap-16">
           {/* Left content */}
           <motion.div
             initial="hidden"
             animate="visible"
             variants={fadeUpVariants}
             transition={transition}
-            className="max-w-xl pb-10 lg:max-w-2xl lg:pb-16"
+            className="relative z-10 max-w-xl pb-2 sm:pb-6 lg:max-w-2xl lg:pb-16"
           >
             <h1 className="text-4xl font-bold leading-[1.08] tracking-tight text-brand-foreground sm:text-5xl lg:text-[3.25rem] xl:text-6xl">
               {siteConfig.hero.headline}
@@ -82,27 +82,28 @@ export function Hero() {
             animate="visible"
             variants={fadeUpVariants}
             transition={{ ...transition, delay: reducedMotion ? 0 : 0.12 }}
-            className="relative mx-auto flex w-full max-w-lg items-center justify-center sm:max-w-xl lg:max-w-none"
+            className="relative z-0 mx-auto flex w-full max-w-[220px] items-end justify-center sm:max-w-[280px] lg:max-w-[320px] lg:items-center xl:max-w-[360px]"
           >
-            <div className="relative aspect-square w-full max-w-[480px] sm:max-w-[560px] lg:max-w-[640px] xl:max-w-[720px]">
+            <div className="relative mx-auto aspect-[481/670] w-full max-w-[220px] sm:max-w-[280px] lg:max-w-[320px] xl:max-w-[360px]">
               <div
                 aria-hidden="true"
-                className="absolute left-1/2 top-1/2 size-[85%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-brand-primary/35 via-brand-primary/15 to-brand-primary/5 blur-sm"
+                className="absolute left-1/2 top-[58%] size-[82%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-brand-primary/35 via-brand-primary/15 to-brand-primary/5 blur-sm"
               />
               <div
                 aria-hidden="true"
-                className="absolute left-1/2 top-1/2 size-[78%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-tr from-brand-primary/25 to-white/80"
+                className="absolute left-1/2 top-[58%] size-[74%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-tr from-brand-primary/25 to-white/80"
               />
 
-              <div className="absolute inset-0 flex items-center justify-center p-1 sm:p-2">
+              <div className="absolute inset-0 flex items-start justify-center pt-1 sm:items-center sm:pt-0">
                 <div className="relative h-full w-full">
                   <Image
                     src="/images/hero-character-bg-removed.png"
                     alt="Verified BaiHub domestic helper, trained, friendly, and ready to help"
                     fill
                     priority
-                    sizes="(max-width: 640px) 90vw, (max-width: 1024px) 560px, 720px"
-                    className="object-contain object-center drop-shadow-md"
+                    quality={90}
+                    sizes="(max-width: 640px) 220px, (max-width: 1024px) 280px, 360px"
+                    className="object-contain object-top sm:object-center"
                   />
                 </div>
               </div>

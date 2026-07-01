@@ -52,7 +52,6 @@ export const siteConfig = {
   areas: [
     { id: "nikoo-homes-1", name: "Nikoo Homes 1", experts: 20, etaMinutes: 10 },
     { id: "nikoo-homes-2", name: "Nikoo Homes 2", experts: 18, etaMinutes: 10 },
-    { id: "nikoo-homes-3", name: "Nikoo Homes 3", experts: 22, etaMinutes: 12 },
     { id: "nikoo-homes-4", name: "Nikoo Homes 4", experts: 16, etaMinutes: 12 },
     { id: "purva-atmosphere", name: "Purva Atmosphere", experts: 24, etaMinutes: 15 },
     { id: "dnr-arista", name: "DNR Arista", experts: 20, etaMinutes: 15 },
@@ -389,8 +388,8 @@ export const siteConfig = {
   footerLinks: {
     company: [
       { label: "About", href: "/about" },
-      // { label: "Blog", href: "/blog" },
-      // { label: "Support", href: "/support" },
+      { label: "Blog", href: "/blog" },
+      { label: "Support", href: "/support" },
     ],
     legal: [
       { label: "Privacy Policy", href: "/privacy-policy" },
