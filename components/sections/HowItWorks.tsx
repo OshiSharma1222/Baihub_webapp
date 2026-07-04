@@ -7,21 +7,30 @@ import { siteConfig } from "@/lib/config/site.config";
 
 const appScreens = [
   {
-    src: "/images/app-screen-1.jpg",
-    alt: "BaiHub app, choose your service",
+    src: "/images/app-screen-1.png",
+    alt: "BaiHub app home screen with services and bookings",
     step: siteConfig.steps[0],
+    aspectClass: "aspect-[458/1024]",
+    imageClass: "object-contain object-top",
+    quality: 90,
   },
   {
     src: "/images/app-screen-2.png",
     alt: "BaiHub app, get matched with verified helpers",
     step: siteConfig.steps[1],
+    aspectClass: "aspect-[9/19]",
+    imageClass: "object-cover object-top",
+    quality: 75,
   },
   {
     src: "/images/app-screen-3.jpg",
     alt: "BaiHub app, book and pay securely",
     step: siteConfig.steps[2],
+    aspectClass: "aspect-[9/19]",
+    imageClass: "object-cover object-top",
+    quality: 75,
   },
-];
+] as const;
 
 const phoneVariants = {
   hidden: { opacity: 0, y: 60, scale: 0.92 },
@@ -81,13 +90,14 @@ export function HowItWorks() {
                 }
                 className={`relative overflow-hidden rounded-[2rem] shadow-2xl shadow-black/10 ${PHONE_WIDTH}`}
               >
-                <div className="relative aspect-[9/19] w-full bg-white">
+                <div className={`relative w-full bg-white ${screen.aspectClass}`}>
                   <Image
                     src={screen.src}
                     alt={screen.alt}
                     fill
+                    quality={screen.quality}
                     sizes="(max-width: 640px) 80vw, 240px"
-                    className="object-cover object-top"
+                    className={screen.imageClass}
                   />
                 </div>
               </motion.div>

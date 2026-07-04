@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -58,6 +59,9 @@ function getArticleJsonLd(slug: string) {
     headline: article.title,
     description: article.metaDescription,
     keywords: article.focusKeyword,
+    image: article.featuredImage?.src
+      ? `${siteConfig.siteUrl}${article.featuredImage.src}`
+      : undefined,
     url: `${siteConfig.siteUrl}/blog/${article.slug}`,
     publisher: {
       "@type": "Organization",
@@ -112,6 +116,19 @@ export default async function BlogArticlePage({ params }: PageProps) {
           </h1>
           <p className="mt-3 text-sm text-brand-muted">{article.readingTime}</p>
 
+          {article.featuredImage && (
+            <div className="relative mt-8 aspect-[16/9] overflow-hidden rounded-3xl bg-brand-primary/5">
+              <Image
+                src={article.featuredImage.src}
+                alt={article.featuredImage.alt}
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 768px"
+                className="object-cover object-center"
+              />
+            </div>
+          )}
+
           <div className="mt-10 space-y-10">
             {article.content.map((section) => (
               <section key={section.heading}>
@@ -148,6 +165,20 @@ export default async function BlogArticlePage({ params }: PageProps) {
                     ))}
                   </ul>
                 )}
+
+                {section.image && (
+                  <figure className="mt-6 overflow-hidden rounded-2xl bg-brand-primary/5">
+                    <div className="relative aspect-[4/3] w-full">
+                      <Image
+                        src={section.image.src}
+                        alt={section.image.alt}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 768px"
+                        className="object-cover object-center"
+                      />
+                    </div>
+                  </figure>
+                )}
               </section>
             ))}
           </div>
@@ -158,7 +189,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
             </h2>
             <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-brand-muted">
               Book a background-checked maid, cook, babysitter or caretaker with
-              BaiHub — transparent pricing and same-day replacement.
+              BaiHub: transparent pricing and same-day replacement.
             </p>
             <ButtonAnchor
               href={getBookUrl()}

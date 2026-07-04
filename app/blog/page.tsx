@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
@@ -41,6 +42,17 @@ export default function BlogIndexPage() {
 
               const cardInner = (
                 <>
+                  {article.featuredImage && (
+                    <div className="relative -mx-6 -mt-6 mb-5 aspect-[16/9] overflow-hidden rounded-t-3xl bg-brand-primary/5">
+                      <Image
+                        src={article.featuredImage.src}
+                        alt={article.featuredImage.alt}
+                        fill
+                        sizes="(max-width: 640px) 100vw, 50vw"
+                        className="object-cover object-center"
+                      />
+                    </div>
+                  )}
                   <div className="flex items-center gap-2">
                     <span className="rounded-full bg-brand-primary/20 px-3 py-1 text-xs font-semibold text-brand-foreground">
                       {article.focusKeyword}
