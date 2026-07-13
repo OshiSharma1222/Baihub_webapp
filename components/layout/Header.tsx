@@ -9,9 +9,9 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { siteConfig } from "@/lib/config/site.config";
+import { BaiHubLogo } from "@/components/shared/BaiHubLogo";
 import { cn } from "@/lib/utils";
 import { ChevronDown, Menu } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
@@ -109,14 +109,7 @@ export function Header() {
       >
         <div className="section-container flex h-16 items-center justify-between gap-4 lg:h-20">
           <Link href="/" className="shrink-0" aria-label={`${siteConfig.name} home`}>
-            <Image
-              src="/images/logo.png"
-              alt={siteConfig.name}
-              width={220}
-              height={64}
-              className="h-14 w-auto sm:h-16 lg:h-[4.5rem]"
-              priority
-            />
+            <BaiHubLogo priority className="w-[6.75rem] sm:w-[7.75rem] lg:w-[8.75rem]" />
           </Link>
 
           <nav
