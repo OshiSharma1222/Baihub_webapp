@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
+import { BaiHubLogo } from "@/components/shared/BaiHubLogo";
 import { siteConfig } from "@/lib/config/site.config";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
@@ -23,17 +23,8 @@ export function Footer() {
         <div className="grid gap-10 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <Link href="/" aria-label={`${siteConfig.name} home`}>
-              <Image
-                src="/images/logo.png"
-                alt={siteConfig.name}
-                width={200}
-                height={58}
-                className="h-12 w-auto brightness-0 invert sm:h-14 lg:h-16"
-              />
+              <BaiHubLogo variant="light" className="w-[7.5rem] sm:w-[8.5rem]" />
             </Link>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/70">
-              {siteConfig.tagline}
-            </p>
             <div className="mt-6 flex gap-3">
               {siteConfig.socialLinks.map((social) => {
                 const Icon =

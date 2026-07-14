@@ -146,7 +146,7 @@ export const siteConfig = {
 
   whyBaiHub: {
     eyebrow: "Why Choose BaiHub",
-    headline: "Trusted by 2,500+ Families",
+    headline: "Trusted by 500+ Families",
     trustCard: {
       title: "Trusted by India's Families",
       description:
@@ -181,10 +181,10 @@ export const siteConfig = {
   ],
 
   stats: [
-    { label: "Families Served", value: 2500, suffix: "+" },
-    { label: "Verified Helpers", value: 800, suffix: "+" },
-    { label: "Cities", value: 12, suffix: "+" },
-    { label: "Avg. Match Time", value: 24, suffix: " hrs" },
+    { label: "Families Served", value: 500, suffix: "+" },
+    { label: "Verified Helpers", value: 50, suffix: "+" },
+    { label: "Societies", value: 10, suffix: "+" },
+    { label: "Repeat Users", value: 80, suffix: "%+" },
   ],
 
   testimonialsSection: {
